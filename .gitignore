@@ -1,0 +1,23 @@
+# Python 虚拟环境体积很大，并且与本机解释器绑定，不应提交到 GitHub。
+.venv/
+venv/
+
+# Python 缓存和构建产物。
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+
+# Jupyter 临时检查点。
+.ipynb_checkpoints/
+
+# IDE 与操作系统的本地配置。
+.idea/
+.vscode/
+.DS_Store
+
+# 运行学习案例时生成的临时文件和图表。
+runtime_data/
+outputs/*.html
+
