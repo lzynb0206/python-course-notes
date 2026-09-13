@@ -1,0 +1,5 @@
+# 第 136～138 集：Python 操作 MySQL。
+pymysql>=1.0,<2.0
+
+# 第 139～153 集：PySpark。运行前还需要本机安装兼容版本的 Java。
+pyspark>=3.3,<5.0
