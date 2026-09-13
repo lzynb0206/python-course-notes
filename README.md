@@ -18,6 +18,8 @@
 
 详细的章节索引见 [python_course/README.md](python_course/README.md)。
 
+仓库还收录了莫烦 Python《Numpy & Pandas 数据处理教程》`BV1Ex411L7oT` 的完整 18 集笔记，详见 [numpy和pandas学习/README.md](numpy和pandas学习/README.md)。
+
 ## 目录结构
 
 ```text
@@ -42,6 +44,7 @@ python_study/
 │   ├── 16_Socket网络编程/
 │   ├── 17_正则表达式/
 │   └── 18_递归/
+├── numpy和pandas学习/      # NumPy 与 Pandas 18 集配套笔记
 ├── .gitignore
 └── README.md
 ```
@@ -61,6 +64,13 @@ cd python-course-notes
 python3 "python_course/01_基础语法_类型转换与字符串/第18-28集_基础语法.py"
 python3 "python_course/05_列表元组字符串集合字典/第62-80集_数据容器.py"
 python3 "python_course/14_闭包装饰器与设计模式/第154-157集_高级语法与设计模式.py"
+```
+
+运行 NumPy 和 Pandas 专题前，先安装对应依赖：
+
+```bash
+python3 -m pip install -r "numpy和pandas学习/requirements.txt"
+python3 "numpy和pandas学习/03_NumPy数组属性.py"
 ```
 
 运行数据可视化示例前，需要安装 pyecharts：
@@ -111,5 +121,6 @@ python3 -m pip install -r python_course/requirements-advanced.txt
 ## 课程来源
 
 - [黑马程序员 Python 教程](https://www.bilibili.com/video/BV1qW4y1a7fU)
+- [莫烦 Python：Numpy & Pandas 数据处理教程](https://www.bilibili.com/video/BV1Ex411L7oT)
 
 本仓库仅用于学习与交流，课程内容版权归原作者所有。
