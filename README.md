@@ -44,7 +44,7 @@ python_study/
 │   ├── 16_Socket网络编程/
 │   ├── 17_正则表达式/
 │   └── 18_递归/
-├── numpy和pandas学习/      # NumPy 与 Pandas 18 集配套笔记
+├── numpy和pandas学习/      # NumPy 与 Pandas 18 集交互式 Notebook
 ├── .gitignore
 └── README.md
 ```
@@ -70,7 +70,7 @@ python3 "python_course/14_闭包装饰器与设计模式/第154-157集_高级语
 
 ```bash
 python3 -m pip install -r "numpy和pandas学习/requirements.txt"
-python3 "numpy和pandas学习/03_NumPy数组属性.py"
+python3 -m jupyter lab
 ```
 
 运行数据可视化示例前，需要安装 pyecharts：

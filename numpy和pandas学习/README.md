@@ -1,33 +1,33 @@
 # NumPy 和 Pandas 学习笔记
 
-这组代码对应莫烦 Python 的《Numpy & Pandas 数据处理教程》`BV1Ex411L7oT`，共 18 集。
+这套笔记对应莫烦 Python 的《Numpy & Pandas 数据处理教程》`BV1Ex411L7oT`，共 18 集。每一集整理为一个 Notebook，可以一边看解释，一边运行紧随其后的例子。
 
 课程录制时间较早，核心概念仍然适用，但部分 Pandas 接口已经发生变化。这里使用当前常见写法重新整理，例如用 `loc`、`iloc` 代替已经移除的 `ix`，用 `pd.concat()` 代替 `DataFrame.append()`。因此可以按照原视频学习，也可以直接在较新的 NumPy 和 Pandas 环境中运行。
 
-建议先阅读 [《18 集详细讲解》](18集详细讲解.md)，再打开对应的 Python 文件动手运行。讲义负责解释概念、使用场景和易错点，代码中的少量输出只用来验证运算结果。
+Notebook 是主要学习入口，内容按“知识点说明 → 示例代码 → 结果观察 → 易错点与小结”组织。想连续复习整门课时，也可以阅读 [《18 集详细讲解》](18集详细讲解.md)。
 
 ## 课程目录
 
-| 集数 | 视频主题 | 对应代码 |
+| 集数 | 视频主题 | Notebook |
 |---:|---|---|
-| 1 | NumPy 和 Pandas 有什么用 | `01_NumPy和Pandas有什么用.py` |
-| 2 | NumPy 和 Pandas 安装 | `02_安装与环境检查.py` |
-| 3 | NumPy 属性 | `03_NumPy数组属性.py` |
-| 4 | NumPy 创建 array | `04_NumPy创建数组.py` |
-| 5 | NumPy 基础运算 1 | `05_NumPy基础运算一.py` |
-| 6 | NumPy 基础运算 2 | `06_NumPy基础运算二.py` |
-| 7 | NumPy 索引 | `07_NumPy索引与迭代.py` |
-| 8 | NumPy array 合并 | `08_NumPy数组合并.py` |
-| 9 | NumPy array 分割 | `09_NumPy数组分割.py` |
-| 10 | NumPy copy 与 deep copy | `10_NumPy复制与视图.py` |
-| 11 | Pandas 基本介绍 | `11_Pandas基础介绍.py` |
-| 12 | Pandas 选择数据 | `12_Pandas选择数据.py` |
-| 13 | Pandas 设置值 | `13_Pandas设置值.py` |
-| 14 | Pandas 处理丢失数据 | `14_Pandas处理缺失数据.py` |
-| 15 | Pandas 导入导出 | `15_Pandas导入导出.py` |
-| 16 | Pandas 合并 concat | `16_Pandas合并concat.py` |
-| 17 | Pandas 合并 merge | `17_Pandas合并merge.py` |
-| 18 | Pandas plot 画图 | `18_Pandas绘图.py` |
+| 1 | NumPy 和 Pandas 有什么用 | [打开笔记](01_NumPy和Pandas有什么用.ipynb) |
+| 2 | NumPy 和 Pandas 安装 | [打开笔记](02_安装与环境检查.ipynb) |
+| 3 | NumPy 属性 | [打开笔记](03_NumPy数组属性.ipynb) |
+| 4 | NumPy 创建 array | [打开笔记](04_NumPy创建数组.ipynb) |
+| 5 | NumPy 基础运算 1 | [打开笔记](05_NumPy基础运算一.ipynb) |
+| 6 | NumPy 基础运算 2 | [打开笔记](06_NumPy基础运算二.ipynb) |
+| 7 | NumPy 索引 | [打开笔记](07_NumPy索引与迭代.ipynb) |
+| 8 | NumPy array 合并 | [打开笔记](08_NumPy数组合并.ipynb) |
+| 9 | NumPy array 分割 | [打开笔记](09_NumPy数组分割.ipynb) |
+| 10 | NumPy copy 与 deep copy | [打开笔记](10_NumPy复制与视图.ipynb) |
+| 11 | Pandas 基本介绍 | [打开笔记](11_Pandas基础介绍.ipynb) |
+| 12 | Pandas 选择数据 | [打开笔记](12_Pandas选择数据.ipynb) |
+| 13 | Pandas 设置值 | [打开笔记](13_Pandas设置值.ipynb) |
+| 14 | Pandas 处理丢失数据 | [打开笔记](14_Pandas处理缺失数据.ipynb) |
+| 15 | Pandas 导入导出 | [打开笔记](15_Pandas导入导出.ipynb) |
+| 16 | Pandas 合并 concat | [打开笔记](16_Pandas合并concat.ipynb) |
+| 17 | Pandas 合并 merge | [打开笔记](17_Pandas合并merge.ipynb) |
+| 18 | Pandas plot 画图 | [打开笔记](18_Pandas绘图.ipynb) |
 
 ## 安装
 
@@ -43,17 +43,19 @@ python3 -m pip install -r "numpy和pandas学习/requirements.txt"
 .venv/bin/python -m pip install -r "numpy和pandas学习/requirements.txt"
 ```
 
-## 运行
+## 打开并学习
 
-每个文件都可以单独执行。例如：
+用 PyCharm 打开任意 `.ipynb` 文件，选择项目的 `.venv` 作为 Python 内核，然后从上到下逐格运行即可。
+
+也可以在终端启动 JupyterLab：
 
 ```bash
-.venv/bin/python "numpy和pandas学习/03_NumPy数组属性.py"
-.venv/bin/python "numpy和pandas学习/12_Pandas选择数据.py"
-.venv/bin/python "numpy和pandas学习/18_Pandas绘图.py"
+.venv/bin/python -m jupyter lab
 ```
 
-推荐按编号顺序学习。先阅读每一节的注释，尝试判断输出，再运行代码并修改数组形状、索引条件或表格内容观察结果。
+推荐按编号顺序学习。读完一个 Markdown 说明后，先猜一猜下一格代码的结果，再运行验证；随后修改数组形状、筛选条件或表格内容，看看结果如何变化。
+
+Notebook 默认不保存预运行结果，第一次打开时需要自己执行代码单元。这样更适合动手学习，也能避免不同版本产生的旧输出干扰。
 
 ## 几个容易混淆的概念
 
