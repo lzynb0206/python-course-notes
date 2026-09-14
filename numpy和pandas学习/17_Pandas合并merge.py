@@ -1,4 +1,16 @@
-"""第 17 集：使用 merge 按键关联两张表。"""
+"""
+第 17 集：使用 merge 按键关联两张表。
+
+merge 不要求两张表结构相同，它根据共同的键找到彼此相关的记录。可以把它理解
+为 SQL JOIN：
+- inner 只保留两边都匹配的键。
+- left/right 完整保留指定一侧，另一侧没有匹配时产生缺失值。
+- outer 保留两边所有键。
+
+合并前应检查键是否唯一以及预期是一对一、一对多还是多对多。意外的重复键可能
+让结果行数成倍增加。indicator 用来追踪记录来源，validate 用来主动检查键关系，
+suffixes 用来处理两表中除连接键外的重名列。
+"""
 
 import pandas as pd
 
@@ -87,4 +99,4 @@ checked = pd.merge(
 )
 print(checked)
 
-print("\n关联类型速记：inner=交集，left=保留左表，right=保留右表，outer=并集")
+# 关联类型速记：inner=交集，left=保留左表，right=保留右表，outer=并集。

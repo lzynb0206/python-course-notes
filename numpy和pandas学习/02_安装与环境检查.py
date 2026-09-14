@@ -1,4 +1,14 @@
-"""第 2 集：安装 NumPy、Pandas，并检查当前环境。"""
+"""
+第 2 集：安装 NumPy、Pandas，并检查当前环境。
+
+学习目标：
+1. 明白“Python 解释器”和“安装到该解释器的第三方包”是一套环境。
+2. 学会使用 python -m pip，避免 pip 与 python 指向不同环境。
+3. 能根据 ModuleNotFoundError 排查解释器配置。
+
+虚拟环境的作用是把每个项目的依赖隔离开。仓库里的 .venv 只服务于本项目，
+不会和系统 Python 或其他项目争用同一套包版本。
+"""
 
 import platform
 import sys
@@ -34,7 +44,7 @@ def environment_check():
 
 environment_check()
 
-print("\n遇到 ModuleNotFoundError 时可以依次检查：")
-print("1. 当前运行文件所用的 Python 解释器路径")
-print("2. 安装依赖时 python -m pip 所用的解释器路径")
-print("3. PyCharm 项目解释器是否选择了仓库中的 .venv")
+# 遇到 ModuleNotFoundError 时，按下面的顺序排查：
+# 1. 当前运行文件所使用的 Python 解释器路径。
+# 2. 安装依赖时 python -m pip 所使用的解释器路径。
+# 3. PyCharm 的项目解释器是否选择了仓库中的 .venv。

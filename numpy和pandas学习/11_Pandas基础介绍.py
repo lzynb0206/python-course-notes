@@ -1,4 +1,18 @@
-"""第 11 集：Pandas 的 Series、DataFrame 和常用概览操作。"""
+"""
+第 11 集：Pandas 的 Series、DataFrame 和常用概览操作。
+
+Series 是带索引的一维数据；DataFrame 是共享同一行索引的多列数据。与 NumPy
+二维数组相比，DataFrame 的每一列可以有自己的名称和 dtype，因此更适合姓名、
+日期、金额、类别等现实表格。
+
+拿到一张陌生表时，建议先查看：
+1. head/tail：数据长什么样。
+2. shape、index、columns：表有多大，行列标签是什么。
+3. dtypes：每列是否被解析成正确类型。
+4. describe：数值列的大致分布。
+
+Pandas 按标签自动对齐数据。这很强大，但索引不一致时也可能产生 NaN。
+"""
 
 import numpy as np
 import pandas as pd

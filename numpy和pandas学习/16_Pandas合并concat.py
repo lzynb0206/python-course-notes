@@ -1,4 +1,16 @@
-"""第 16 集：使用 pd.concat 沿行或列拼接数据。"""
+"""
+第 16 集：使用 pd.concat 沿行或列拼接数据。
+
+concat 解决“多块结构相近的数据怎样堆在一起”：
+- axis=0 纵向追加记录，重点检查列名如何对齐。
+- axis=1 横向增加字段，重点检查行索引如何对齐。
+- join="outer" 保留索引并集，join="inner" 只保留索引交集。
+- ignore_index=True 丢弃原行索引并重新编号。
+- keys 可以记录每一块数据来自哪里，并产生多层索引。
+
+原课程中的 DataFrame.append 和 concat 的 join_axes 参数已移除。本例分别改用
+pd.concat 和 concat 后 reindex，概念相同，但能在新版 Pandas 中运行。
+"""
 
 import numpy as np
 import pandas as pd
@@ -56,6 +68,6 @@ print(with_source)
 print("取出第二组：\n", with_source.loc["第二组"])
 
 
-print("\nconcat 与 merge：")
-print("concat -> 按轴堆叠多个对象，主要关心轴和索引如何对齐")
-print("merge  -> 根据一列或多列键匹配记录，类似 SQL JOIN")
+# concat 与 merge 的区别：
+# concat 按轴堆叠多个对象，主要关心轴与索引如何对齐。
+# merge 根据一列或多列键匹配记录，思路类似 SQL JOIN。

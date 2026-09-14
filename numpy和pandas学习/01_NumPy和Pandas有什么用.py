@@ -1,4 +1,18 @@
-"""第 1 集：NumPy 和 Pandas 有什么用？"""
+"""
+第 1 集：NumPy 和 Pandas 有什么用？
+
+学习目标：
+1. 理解 Python 列表和 NumPy 数组的定位差异。
+2. 理解“向量化”为什么能让数值代码更简洁。
+3. 知道 Series、DataFrame 分别表示什么。
+
+核心理解：
+- NumPy 擅长处理形状规则、元素类型一致的多维数值数据。
+- Pandas 在数组之上增加了行列标签，适合处理现实中的表格数据。
+- 两者不是互相替代：实际分析中经常用 Pandas 整理数据，再用 NumPy 计算。
+
+下面的 print 只用来观察运算结果；概念解释都写在代码注释中。
+"""
 
 import numpy as np
 import pandas as pd
@@ -60,6 +74,6 @@ students["standard_score"] = (
 ) / students["score"].std(ddof=0)
 print(students.round(2))
 
-print("\n选择建议：")
-print("NumPy  -> 多维数值数组、矩阵运算、科学计算")
-print("Pandas -> 带行列标签的表格、清洗、统计、合并和导入导出")
+# 选择建议：
+# - 面对规则的多维数值、矩阵运算或科学计算，先想到 NumPy。
+# - 面对带字段名的表格、缺失值、分组、合并或文件导入，先想到 Pandas。

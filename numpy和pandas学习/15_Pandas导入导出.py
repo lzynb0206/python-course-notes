@@ -1,4 +1,17 @@
-"""第 15 集：用 Pandas 读取和保存 CSV、Pickle、JSON。"""
+"""
+第 15 集：用 Pandas 读取和保存 CSV、Pickle、JSON。
+
+导入不是简单地“打开文件”，还要确认编码、分隔符、列名、缺失值和 dtype 是否
+正确。导出时则要考虑接收方是谁：人、其他编程语言，还是另一个 Python 程序。
+
+- CSV：通用、透明，但不会完整保留数据类型。
+- JSON：适合接口和跨语言交换，可表达嵌套结构。
+- Pickle：能方便还原 Python 对象，但只应读取可信来源的文件。
+- Excel：适合人工查看，通常需要额外安装 openpyxl。
+
+脚本使用 pathlib 根据自身位置寻找 student.csv，所以从不同工作目录运行也不会
+找错文件。所有生成结果写入已被 Git 忽略的 runtime_data。
+"""
 
 from pathlib import Path
 
@@ -52,8 +65,8 @@ print("已保存：", json_output)
 print(pd.read_json(json_output, orient="records"))
 
 
-print("\n格式选择：")
-print("CSV    -> 通用、可直接查看，但类型信息有限")
-print("JSON   -> 适合接口和嵌套结构，跨语言方便")
-print("Pickle -> Python 中还原方便，但只读取可信文件")
-print("Excel  -> 适合人工查看，通常需要安装 openpyxl")
+# 格式选择：
+# CSV    -> 通用、可直接查看，但类型信息有限。
+# JSON   -> 适合接口和嵌套结构，跨语言方便。
+# Pickle -> Python 中还原方便，但只读取可信文件。
+# Excel  -> 适合人工查看，通常需要安装 openpyxl。

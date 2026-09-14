@@ -1,4 +1,16 @@
-"""第 12 集：用列名、loc、iloc 和布尔条件选择 Pandas 数据。"""
+"""
+第 12 集：用列名、loc、iloc 和布尔条件选择 Pandas 数据。
+
+选择数据时先明确自己掌握的是“标签”还是“位置”：
+- frame["列名"]：快速选择单列。
+- loc[行标签, 列标签]：按真实标签选择。
+- iloc[行位置, 列位置]：按从 0 开始的整数位置选择。
+- 布尔条件：选择满足业务规则的行，再指定需要的列。
+- at/iat：只访问一个单元格时更直接。
+
+loc 的标签切片通常包含终点；iloc 的位置切片和 Python 列表一样不包含终点。
+原课程使用的 ix 已被移除，现在应明确使用 loc 或 iloc。
+"""
 
 import numpy as np
 import pandas as pd
@@ -45,9 +57,9 @@ print(frame.query("A >= 8 and D <= 19"))
 print("at 按标签取单值：", frame.at[dates[0], "A"])
 print("iat 按位置取单值：", frame.iat[0, 0])
 
-print("\nloc 与 iloc 速记：")
-print("loc  -> label，使用真实标签；标签切片包含终点")
-print("iloc -> integer location，使用整数位置；位置切片不包含终点")
+# loc 与 iloc 速记：
+# loc  -> label，使用真实标签；标签切片通常包含终点。
+# iloc -> integer location，使用整数位置；位置切片不包含终点。
 
 # 原课程中的 ix 已被 Pandas 移除。现在应明确选择 loc 或 iloc，
 # 这样代码含义更清楚，也不会依赖模糊的“标签或位置混合判断”。
